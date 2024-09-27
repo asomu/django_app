@@ -11,7 +11,6 @@
     <title>Hello, pybo!</title>
 </head>
 <body>
-<!-- 네비게이션바 -->
 {% include "navbar.html" %}
 {% block content %}
 {% endblock %}
@@ -19,5 +18,9 @@
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
 <!-- Bootstrap JS -->
 <script src="{% static 'bootstrap.min.js' %}"></script>
+<!--자바스크립트 Start-->
+{% block script %}
+{% endblock %}
+<!--자바스크립트 End-->
 </body>
 </html>
