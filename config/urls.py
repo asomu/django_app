@@ -18,10 +18,16 @@ from django.contrib import admin
 from django.urls import path, include
 from pybo import views
 from pybo.views import base_views
+from contourshow import views
+from common.views import index
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pybo/', include('pybo.urls')),
+    path('contourshow/', include('contourshow.urls')),
+    path('matrix/', include('matrix.urls')),
     path('common/', include('common.urls')),
-    path('', base_views.index, name='index'),
+    path('', index, name='index'),
 ]
+

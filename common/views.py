@@ -3,6 +3,11 @@ from django.shortcuts import redirect, render
 from common.forms import UserForm
 
 
+def index(request):
+    form = None
+    return render(request, 'common/welcome.html', {'form': form})
+
+
 def logout_view(request):
     logout(request)
     return redirect('index')
