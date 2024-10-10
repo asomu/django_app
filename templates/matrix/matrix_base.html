@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-3">
+  <div class="row">
+  {% include "matrix/sidebar.html" %}
+      <div class="col-md-9 mt-3">
+      {% block main_contents %}
+      {% endblock %}
+      </div>
+  </div>
+</div>
+{% endblock %}

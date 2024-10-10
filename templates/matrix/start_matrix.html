@@ -1,0 +1,68 @@
+{% extends "matrix/matrix_base.html" %}
+{% block main_contents %}
+<div class="container ms-5">
+    <h1 class="mb-4">Start Matrix</h1>
+    <h3 class="mt-5" id="설치-방법">설치 방법</h3>
+    <ol>
+        <li class="mb-4 pb-3" >
+            <strong>모델 압축파일을 받아서 적당한 곳에 압축을 푼다.</strong>
+            <ul class="ps-4">
+                <li>맨 처음 압축을 풀면 <code>Model.xml</code> 파일 하나만 존재한다.</li>
+                <li class="mt-2 list-unstyled">
+                    <img src="/static/matrix/images/program_1.png" class="img-fluid rounded" alt="guide_1">
+                </li>
+            </ul>
+        </li>
+        <li class="mb-4 pb-3">
+            <strong><a href="{% url 'matrix:download_file' 'Matrix 2024c.zip' %}">Matrix</a> 압축파일을 받아서 적당한 곳에 압축을 푼다.</strong>
+        </li>
+        <li class="mb-4 pb-3">
+            <strong>Matrix.exe를 실행하고 먼저 압축을 풀었던 모델 폴더를 선택한다.</strong>
+            <ul class="ps-4">
+                <li>맨 처음 압축을 풀면 <code>Model.xml</code> 파일 하나만 존재한다.</li>
+                <li class="mt-2 list-unstyled">
+                    <img src="/static/matrix/images/program_2.png" class="rounded" alt="guide_2">
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <h3 class="mt-5">메인 화면</h3>
+    <ul class="ps-4">
+        <li><strong>테스트 설정(F8)</strong> : 테스트 설정창을 보여준다. <a href="{% url 'matrix:test_flow' %}">(Test Flow 참조)</a></li>
+        <li><strong>MIPI 창 열기(F10)</strong> : 현재 선택된 모델의 MIPI GUI를 보여준다.</li>
+        <li><strong>Control Desk 열기(F7)</strong> : Control Desk 창을 보여준다. <a href="{% url 'matrix:control_desk' %}">(Control Desk 참조)</a></li>
+        <li><strong>테스트 코멘트창</strong> : 여기에 쓴 코멘트 이름으로 서브디렉토리가 생성되어 그 안에 데이터가 저장된다.</li>
+        <li class="mt-2 list-unstyled">
+            <img src="/static/matrix/images/program_3.png" class="img-fluid rounded" alt="guide_3">
+        </li>
+    </ul>
+    <h3 class="mt-5">모델 변경</h3>
+    <ul class="ps-4">
+        <li><code>Ctrl + '0'</code>를 누르거나 타이틀 바를 우클릭하여 <code>Select Model</code>을 선택하면 다른 모델 폴더로 이동할 수 있다.</li>
+        <li class="mt-2 list-unstyled">
+            <img src="/static/matrix/images/program_4.png" class="img-fluid rounded" alt="guide_4">
+        </li>
+    </ul>
+    <h3 class="mt-5">단축키</h3>
+    <ul class="ps-4">
+        <li><strong>F1</strong> : 프로그램 정보</li>
+        <li><strong>F9</strong> : 테스트 시작</li>
+        <li><strong>ESC</strong> : 테스트 즉시 멈춤</li>
+        <li><strong>F8</strong> : 테스트 Flow 설정창 열기</li>
+        <li><strong>F10</strong> : 모델 MIPI GUI 열기</li>
+        <li><strong>F7</strong> : Control Desk 열기</li>
+        <li><strong>F11</strong> : 자동스크롤 토글</li>
+        <li><strong>F12</strong> : 테스트 일시정지 토글</li>
+        <li><strong>Ctrl + F12</strong> : 10초간 테스트 일시정지</li>
+        <li><strong>Ctrl + F5</strong> : SG에 있는 모든 Waveform을 리스팅한다. (Control Desk의 Get All Waveforms)</li>
+        <li><strong>Ctrl + F6</strong> : 현재 클립보드에 복사된 Waveform을 SG에 설정한다. (Control Desk의 Set Copied Waveform)</li>
+        <li><strong>Ctrl + '0'</strong> : 모델 변경</li>
+        <li><strong>Ctrl + 'A'</strong> : 테스트 결과 전체선택</li>
+        <li><strong>Ctrl + ' ` ' ('1'번 키 옆)</strong> : 맨 윗줄(헤더)을 제외한 테스트 결과 전체선택</li>
+        <li><strong>Ctrl + 'C'</strong> : 선택된 테스트 결과 복사</li>
+        <li><strong>Ctrl + '1'~'9'</strong> : 선택된 테스트 결과 중 N번째 열(세로 Column)만 복사, 특정 데이터만 복사할 때 유리</li>
+    </ul>
+</div>
+
+
+{% endblock %}

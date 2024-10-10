@@ -8,9 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sidebars.css' %}">
     <title>Welcome to WSD R&D</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 {% include "navbar.html" %}
 {% block content %}
 {% endblock %}
@@ -18,9 +19,11 @@
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
 <!-- Bootstrap JS -->
 <script src="{% static 'bootstrap.min.js' %}"></script>
+<script src="{% static 'sidebars.js' %}"></script>
 <!--자바스크립트 Start-->
 {% block script %}
 {% endblock %}
 <!--자바스크립트 End-->
+{% include "footer.html" %}
 </body>
 </html>

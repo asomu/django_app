@@ -1,0 +1,74 @@
+{% extends "matrix/matrix_base.html" %}
+{% block main_contents %}
+<div class="container ms-5">
+    <h1 class="mb-4">Control Desk</h1>
+    <img src="/static/matrix/images/control_1.png" class="img-fluid rounded" alt="control_1">
+    <h3 class="mt-5">Test Control</h3>
+    <ul class="ps-4">
+        <li>Auto-Scroll (F11) : 테스트 결과 자동 스크롤</li>
+        <li>Pause Test (F12) : 테스트 일지 정지 (Running 중에만 활성화)</li>
+        <li>Pause for 10 seconds (Ctrl + F12) : 10초간 테스트 일시정지 (Running 중에만 활성화)</li>
+    </ul>
+    <h3 class="mt-5">UDR</h3>
+    <ul class="ps-4">
+        <li>Make UDR Sheet : UDR Directory로부터 Rx Common Plan에 사용하는 UDR Sheet를 생성한다.</li>
+        <li>Change Format : R&D UDR(*.csv)과 NPI UDR(*.txt)간의 상호변환</li>
+    </ul>
+    <h3 class="mt-5">Oscilloscope</h3>
+    <ul class="ps-4">
+        <li> Capture Screen : OSC의 화면을 Capture 후 저장한다.</li>
+    </ul>
+    <h3 class="mt-5">Loss File</h3>
+    <ul class="ps-4">
+        <li>Make Loss File From S2P : S2P File들을 선택하여 Loss File로 변환한다.</li>
+    </ul>
+    <h3 class="mt-5">Manual Command & Response</h3>
+    <ul class="ps-4">
+        <li>직접 명령어로 장비를 제어할 수 있다.</li>
+    </ul>
+    <h3 class="mt-5">Spectrum Analyzer</h3>
+    <ul class="ps-4">
+        <li>Capture Screen : SA의 화면을 Capture 후 저장한다.</li>
+        <li>Get Trace Data : SA의 Trace를 CSV 파일로 저장한다.</li>
+    </ul>
+    <h3 class="mt-5">Mini-Circuits SP6Tx2</h3>
+    <ul class="ps-4">
+        <li>SP6T 두 개가 붙은 파란색 Switch Box를 컨트롤한다.</li>
+    </ul>
+    <h3 class="mt-5">Network Analyzer</h3>
+    <ul class="ps-4">
+        <li>Download SNP File : NA로부터 SNP 파일을 얻어온다.</li>
+        <li>Cont ON : SNP 파일을 다운로드 받은 후 NA를 Continuous로 할 것인지 결정한다.</li>
+        <li>Download State : NA의 상태를 파일로 저장한다.</li>
+        <li>Upload State : NA의 상태 파일을 업로드한다.</li>
+    </ul>
+    <h3 class="mt-5">Noise Figure Analyzer</h3>
+    <ul class="ps-4">
+        <li>Download State : NFA의 상태를 파일로 저장한다.</li>
+        <li>Upload State : NFA의 상태 파일을 업로드한다.</li>
+    </ul>
+    <h3 class="mt-5">Signal Generator</h3>
+    <ul class="ps-4">
+        <li>Get All Waveforms : SG에 있는 모든 Waveform을 리스팅한다.</li>
+        <li>Set Copied Waveform : 현재 클립보드에 복사된 Waveform을 SG에 설정한다.</li>
+    </ul>
+    <h3 class="mt-5">Maury Tuner</h3>
+    <ul class="ps-4">
+        <li>Initialize Tuner : Tuner를 초기화한다.</li>
+        <li>Set Freq : Tuner 주파수 설정</li>
+        <li>Set VSWR/Phase : Tuner의 VSWR/Phase를 이동한다.</li>
+        <li>Combine Tuner Cal File (*.tun) : Tune Calibration File들을 합친다.</li>
+    </ul>
+    <h3 class="mt-5">Power Supply</h3>
+    <ul class="ps-4">
+        <li>Calibrate Current : Power Supply의 Leakage Current을 측정하여 Current를 읽을 때 이 값만큼 제외하고 읽게 한다.</li>
+        <li>Calibration 후 정확도가 상당히 상승하는 것을 확인할 수 있다.</li>
+    </ul>
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+        <div>Calibration 시 Power Supply에는 아무것도 연결하지 않아야 한다 </div>
+    </div>
+</div>
+
+
+{% endblock %}

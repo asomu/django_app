@@ -1,0 +1,39 @@
+{% extends "matrix/matrix_base.html" %}
+{% block main_contents %}
+<div class="container ms-5 row">
+    <h1>Matrix Download</h1>
+    <div class="mt-5 col-md-6 col-lg-4 col-xl mb-4">
+    <h2>Matrix 2024 x64</h2>
+    <p>CUP x64 Version. 마지막 업데이트는 v2024C 입니다.</p><div class="list-group">
+        <a class="list-group-item list-group-item-action py-2 text-primary d-flex justify-content-between align-items-center" href="{% url 'matrix:download_file' 'Matrix 2024c.zip' %}">
+          Matrix 2024c x64
+          <span class="badge bg-primary">최신</span>
+        </a>
+        <a class="list-group-item list-group-item-action py-2 text-primary" href="{% url 'matrix:download_file' 'Matrix 2024c.zip' %}">
+          Matrix 2024b x64
+        </a>
+        <a class="list-group-item list-group-item-action py-2 text-primary" href="{% url 'matrix:download_file' 'Matrix 2024c.zip' %}">
+          Matrix 2024a x64
+        </a>
+      </div>
+    </div>
+    <div class="mt-5 col-md-6 col-lg-4 col-xl mb-4">
+    <h2>Matrix 2024 x86</h2>
+    <p>CUP x86 Version. 마지막 업데이트는 v2024C 입니다.</p>
+        <div class="list-group">
+        <a class="list-group-item list-group-item-action py-2 text-primary d-flex justify-content-between align-items-center" href="{% url 'matrix:download_file' 'Matrix 2024c.zip' %}">
+          Matrix 2024c x86
+          <span class="badge bg-primary">최신</span>
+        </a>
+        <a class="list-group-item list-group-item-action py-2 text-primary" href="{% url 'matrix:download_file' 'Matrix 2024c.zip' %}">
+          Matrix 2024b x86
+        </a>
+        <a class="list-group-item list-group-item-action py-2 text-primary" href="{% url 'matrix:download_file' 'Matrix 2024c.zip' %}">
+          Matrix 2024a x86
+        </a>
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}

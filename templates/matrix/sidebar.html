@@ -1,53 +1,223 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">Sidebar</span>
+<div class="sidebar col-md-3">
+  <div class="flex-shrink-0 p-3" style="width: 280px;">
+    <a href="{% url 'matrix:index' %}" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+      <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      <span class="fs-5 fw-semibold">Table of Contents</span>
     </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-          Home
-        </a>
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+          Program Guide
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="{% url 'matrix:start_matrix' %}" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Start Matrix</a></li>
+            <li><a href="{% url 'matrix:test_flow' %}" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Test Flow</a></li>
+            <li><a href="{% url 'matrix:control_desk' %}" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Control Desk</a></li>
+            <li><a href="{% url 'matrix:instrument' %}" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Instrument</a></li>
+            <li><a href="{% url 'matrix:start_matrix' %}" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Group/Loop Control</a></li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-          Dashboard
-        </a>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          Tuner Management
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">old Tuner Control</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Control With Server</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">'tun' File Generation</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Tuner Verification</a></li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-          Orders
-        </a>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+          Register
+        </button>
+        <div class="collapse" id="orders-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Pa Register</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">LNA Register</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Register with Trigger</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Raw Registers</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Run M-Scrip CSV</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Run Scout Buffer CSV</a></li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-          Products
-        </a>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+          Calibration
+        </button>
+        <div class="collapse" id="account-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Loss Calibration</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Fast Calibration</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">General Calibration</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">EVM Calibration</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">ENA Calibration</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">VNA Calibration</a></li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Customers
-        </a>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#csv-collapse" aria-expanded="false">
+          CSV/Harmonic/SNP
+        </button>
+        <div class="collapse" id="csv-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA CSV Condition</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA Harmonic</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">SNP Measurement</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#gain-collapse" aria-expanded="false">
+          Gain Sweep
+        </button>
+        <div class="collapse" id="gain-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA Gain Pulse Sweep</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA Pulse Sweep /w PM</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA Gain Sweep</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">LNA Gain Sweep</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Pin Sweep /w Ext-AMP</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#ruggedness-collapse" aria-expanded="false">
+          Pa Ruggedness/Spurious
+        </button>
+        <div class="collapse" id="ruggedness-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA CSV Condition</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA Harmonic</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">SNP Measurement</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#trx-collapse" aria-expanded="false">
+          Common TRx Plan
+        </button>
+        <div class="collapse" id="trx-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx IIP Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx IIP3 Source Pull</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx P1dB Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx Noise Figure</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx Noise Figure Source Pull</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx EVM Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx General Ruggedness Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx LoadPull Ruggedness Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">TRx S-parameter</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">TRx Current</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Register Verification</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">TRx Leakage</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">TRx LNA Phase Delta @Band Switching</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Tx Pin Sweep</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Tx ACLR Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Tx Harmonic Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Tx Ruggedness Test 2023a</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Tx Phase Delta @Mode Transition</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#data-collapse" aria-expanded="false">
+          Data Analysis
+        </button>
+        <div class="collapse" id="data-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Draw Load Pull Contour</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">S-parameter Calculation</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">RUN File Analysis</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Generate S1P File From Formula</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Draw NF & Gain Contour</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">SNP VSWR Gain</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Show S2P Data</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Show File Names in Dir</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Merge RUN File</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#simple-collapse" aria-expanded="false">
+          Simple Function
+        </button>
+        <div class="collapse" id="simple-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Control Power Supply</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Control Signal Generator</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Capture Spectrum</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Wait For Some Time</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Move Switch Port</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Change Switch Matrix</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Change Switch Map</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Turn On Tracker Vcc</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Read NF Results</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Capture IQ Data</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monitor Temperature Sensor</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#general-collapse" aria-expanded="false">
+          General Measurements
+        </button>
+        <div class="collapse" id="general-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">General IIP Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">General NF Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">General IMD Test</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">General Harmonic Test</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#traditional-collapse" aria-expanded="false">
+          Traditional CSV
+        </button>
+        <div class="collapse" id="traditional-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">LNA P1dB CSV</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">LNA IIP CSV</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">LNA NF CSV</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Tx Leakage CSV</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Spurious CSV</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Current CSV</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#special-collapse" aria-expanded="false">
+          Special Test
+        </button>
+        <div class="collapse" id="special-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rx Passive Noise Figure</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Generate APT Table</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">LNA Ruggedness on Load Pull</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA Waterfall With NA</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Run Waterfall CSV With NA</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">PA Bias Bandwidth</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Measure PA Bias Voltage</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Make De-embedding S2P</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Split Mode NF Load Pull</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Split Mode IIP Load Pull</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Split Mode Gain Load Pull</a></li>
+          </ul>
+        </div>
       </li>
     </ul>
-    <hr>
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>mdo</strong>
-      </a>
-      <ul class="dropdown-menu text-small shadow">
-        <li><a class="dropdown-item" href="#">New project...</a></li>
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
-      </ul>
-    </div>
   </div>
+</div>

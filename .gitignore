@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 .webserver/
 .django_env/
+.static/matrix/download/
