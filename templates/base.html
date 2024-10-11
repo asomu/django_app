@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'sidebars.css' %}">
-    <title>Welcome to WSD R&D</title>
+    {% block title %}
+    {% endblock %}
 </head>
 <body class="d-flex flex-column min-vh-100">
 {% include "navbar.html" %}

@@ -1,4 +1,7 @@
 {% extends "matrix/matrix_base.html" %}
+{% block title %}
+<title>Start Matrix</title>
+{% endblock %}
 {% block main_contents %}
 <div class="container ms-5">
     <h1 class="mb-4">Start Matrix</h1>
@@ -28,9 +31,9 @@
     </ol>
     <h3 class="mt-5">메인 화면</h3>
     <ul class="ps-4">
-        <li><strong>테스트 설정(F8)</strong> : 테스트 설정창을 보여준다. <a href="{% url 'matrix:test_flow' %}">(Test Flow 참조)</a></li>
+        <li><strong>테스트 설정(F8)</strong> : 테스트 설정창을 보여준다. <a href="{% url 'matrix:program_guide' 'test_flow' %}">(Test Flow 참조)</a></li>
         <li><strong>MIPI 창 열기(F10)</strong> : 현재 선택된 모델의 MIPI GUI를 보여준다.</li>
-        <li><strong>Control Desk 열기(F7)</strong> : Control Desk 창을 보여준다. <a href="{% url 'matrix:control_desk' %}">(Control Desk 참조)</a></li>
+        <li><strong>Control Desk 열기(F7)</strong> : Control Desk 창을 보여준다. <a href="{% url 'matrix:program_guide' 'control_desk' %}">(Control Desk 참조)</a></li>
         <li><strong>테스트 코멘트창</strong> : 여기에 쓴 코멘트 이름으로 서브디렉토리가 생성되어 그 안에 데이터가 저장된다.</li>
         <li class="mt-2 list-unstyled">
             <img src="/static/matrix/images/program_3.png" class="img-fluid rounded" alt="guide_3">

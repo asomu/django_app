@@ -1,4 +1,7 @@
 {% extends "matrix/matrix_base.html" %}
+{% block title %}
+<title>Test Flow Management</title>
+{% endblock %}
 {% block main_contents %}
 <div class="container ms-5">
 <h1 class="mb-4">Test Flow Management</h1>
@@ -15,7 +18,7 @@
     <ul>
         <li><strong>Flow 선택창</strong> : 사용하고자 하는 Flow를 Load하는 콤보박스이다.</li>
         <li><strong>Flow 관리 버튼들</strong> : Flow를 복사, 삭제, 병합할 때 사용한다.</li>
-        <li><strong>테스트 장비 설정</strong> : Flow당 하나만 존재하는 특수 아이템을 보여주며 이 아이템은 현재 Flow의 장비 및 옵션을 설정하는 역할을 한다. <a href="{% url 'matrix:instrument' %}">(Instrument 시트 참조)</a></li>
+        <li><strong>테스트 장비 설정</strong> : Flow당 하나만 존재하는 특수 아이템을 보여주며 이 아이템은 현재 Flow의 장비 및 옵션을 설정하는 역할을 한다. <a href="{% url 'matrix:program_guide' 'instrument' %}">(Instrument 시트 참조)</a></li>
         <li><strong>아이템 리스트창</strong> : 현재 Flow를 구성하고 있는 아이템들을 보여준다.</li>
         <li><strong>아이템 세부설정창</strong> : 현재 선택된 아이템의 각종 옵션들을 보여주고 수정할 수 있다.</li>
         <li class="mt-2 list-unstyled">
